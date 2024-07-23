@@ -6,8 +6,11 @@ on:
 
 jobs:
   terraform: 
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps: 
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
