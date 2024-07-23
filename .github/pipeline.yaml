@@ -1,0 +1,13 @@
+name: Terraform CI
+
+on: 
+  push:
+    branches: main
+
+jobs:
+  terraform: 
+    run-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v4
