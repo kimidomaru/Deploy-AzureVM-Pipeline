@@ -57,18 +57,3 @@ variable "vm_name" {
   description = "Name of the Virtual Machine"
   default     = "student-vm"
 }
-
-variable "rg_backend" {
-  type    = string
-  default = "rg-tfbackend"
-}
-
-variable "storage_account" {
-  type    = string
-  default = "tfbackendsaccount"
-}
-
-variable "container_name" {
-  type    = string
-  default = "tfstate"
-}
