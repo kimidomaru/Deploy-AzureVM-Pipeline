@@ -4,9 +4,9 @@ variable "client_id" {}
 variable "client_secret" {}
 
 terraform {
-  backend "local" {
-    path = "./terraform.tfstate"
-  }
+  #backend "local" {
+  #  path = "./terraform.tfstate"
+  #}
 
   required_version = ">=0.12"
 
@@ -23,6 +23,13 @@ terraform {
       source  = "hashicorp/random"
       version = "~>3.0"
     }
+  }
+
+  backend "azurerm" {
+    resource_group_name  = var.rg_backend
+    storage_account_name = var.storage_account
+    container_name       = var.container_name
+    key                  = "terraform.tfstate"
   }
 }
 

@@ -16,7 +16,6 @@ variable "username" {
   default     = "azureuser"
 }
 
-
 variable "vm_admin_password" {
   type        = string
   description = "VM User password"
@@ -57,4 +56,19 @@ variable "vm_name" {
   type        = string
   description = "Name of the Virtual Machine"
   default     = "student-vm"
+}
+
+variable "rg_backend" {
+  type    = string
+  default = "rg-tfbackend"
+}
+
+variable "storage_account" {
+  type    = string
+  default = "tfbackendsaccount"
+}
+
+variable "container_name" {
+  type    = string
+  default = "tfstate"
 }

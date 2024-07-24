@@ -105,7 +105,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 resource "local_file" "ansible_inventory" {
   content = templatefile("inventory.tpl",
     {
-      vm      = azurerm_linux_virtual_machine.vm
+      vm       = azurerm_linux_virtual_machine.vm
       username = var.username
       password = var.vm_admin_password
     }
