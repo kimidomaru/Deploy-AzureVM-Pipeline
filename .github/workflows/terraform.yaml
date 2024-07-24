@@ -34,7 +34,7 @@ jobs:
       
   terraform_ansible: 
     runs-on: ubuntu-latest
-    #needs: [lint, security_check]
+    needs: [lint, security_check]
     
     env: 
       ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
