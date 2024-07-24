@@ -1,0 +1,21 @@
+- hosts: all
+  become: true
+  tasks: 
+
+    - name: Update apt cache
+      apt: update_cache=yes
+      
+    - name: Install nginx
+      apt: name=nginx state=latest
+      notify: 
+        - restart nginx
+
+    - name: Start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=reloaded
+      
