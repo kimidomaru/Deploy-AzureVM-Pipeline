@@ -17,7 +17,7 @@ This project sets up an Azure VM environment, installs Nginx using Ansible, and 
 
 This project automates the deployment of an Azure Virtual Machine (VM) and the installation of Nginx on it using Ansible. The entire process is managed through a GitHub Actions pipeline, ensuring continuous integration and deployment. It's also possible to deploy the Terraform/Ansible locally, passing the Azure Connection Variables.
 
-At the end of the pipeline, a resource group named `student-rg` will be created in your Azure Subscription. This resource group will contain a Virtual Machine (VM), a Public IP, a Network Interface, and a Network Security Group (NSG). By accessing the VM's Public IP, you will see the Nginx welcome page.
+At the end of the pipeline, a resource group named `student-rg` will be created in your Azure Subscription. This resource group will contain a Virtual Machine (VM), a Disk, a Public IP, a Network Interface, a Virtual Network (also a Subnet) and a Network Security Group (NSG). By accessing the VM's Public IP, you will see the Nginx welcome page.
 
 ## Prerequisites
 
